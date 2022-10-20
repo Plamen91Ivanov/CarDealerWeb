@@ -1,4 +1,4 @@
-using CarDealerWeb.Data;
+using CarDealer.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

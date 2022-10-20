@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealerWeb", "CarDealerWeb\CarDealerWeb.csproj", "{CD48A360-F82A-4730-B889-5AE9D7344784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerWeb", "CarDealerWeb\CarDealerWeb.csproj", "{CD48A360-F82A-4730-B889-5AE9D7344784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealer.Data", "CarDealer.Data\CarDealer.Data.csproj", "{1374F560-575A-4D03-A73F-C4949E9EF676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealer.Data", "CarDealer.Data\CarDealer.Data.csproj", "{1374F560-575A-4D03-A73F-C4949E9EF676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealer.Services", "CarDealer.Services\CarDealer.Services.csproj", "{701F5700-057B-4B86-A069-E1C67C088EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1374F560-575A-4D03-A73F-C4949E9EF676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1374F560-575A-4D03-A73F-C4949E9EF676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1374F560-575A-4D03-A73F-C4949E9EF676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701F5700-057B-4B86-A069-E1C67C088EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701F5700-057B-4B86-A069-E1C67C088EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701F5700-057B-4B86-A069-E1C67C088EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701F5700-057B-4B86-A069-E1C67C088EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
