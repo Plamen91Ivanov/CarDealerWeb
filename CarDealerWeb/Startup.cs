@@ -1,4 +1,5 @@
 using CarDealer.Data;
+using CarDealer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,9 @@ namespace CarDealerWeb
                 .AddEntityFrameworkStores<CarDealerDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<ICustomerService, CustomersService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +64,9 @@ namespace CarDealerWeb
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(name: "customer",
+                pattern: "customers/all/{order}",
+                defaults: new { controller = "Customers", action = "All" });
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

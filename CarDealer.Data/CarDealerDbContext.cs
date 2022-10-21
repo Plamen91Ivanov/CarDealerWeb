@@ -49,7 +49,7 @@ namespace CarDealer.Data
                 .Entity<Sale>()
                 .HasOne(s => s.Customer)
                 .WithMany(c => c.Sales)
-                .HasForeignKey(s => s.CustormerId);
+                .HasForeignKey(s => s.CustomerId);
             builder
                 .Entity<Supplier>()
                 .HasMany(s => s.Parts)

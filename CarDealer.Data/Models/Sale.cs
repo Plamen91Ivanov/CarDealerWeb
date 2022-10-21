@@ -14,7 +14,7 @@ namespace CarDealer.Data.Models
 
         public Car Car { get; set; }
 
-        public int CustormerId { get; set; }
+        public int CustomerId { get; set; }
 
         public Customer Customer { get; set; }
 

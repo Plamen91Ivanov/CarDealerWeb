@@ -1,0 +1,36 @@
+﻿@model AllCustomersModel
+ 
+<h2>All customers</h2>
+<h3>Ordered in  @(Model.OrderDirection.ToString().ToLower()) direction</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                BirthDay
+            </th>
+            <th>
+                Is Young Driver
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var customer in Model.Customers)
+        {
+         <tr>
+            <td>
+                @customer.Name
+            </td>
+            <td>
+                @customer.BirthDay.ToShortDateString()
+            </td>
+            <td>
+                @(customer.IsYoungDriver ? "Yes" : "No")
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
