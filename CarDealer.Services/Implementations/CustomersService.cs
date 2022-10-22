@@ -20,6 +20,7 @@ namespace CarDealer.Services
         {
             var customersQuery = this.db.Customers.AsQueryable();
 
+            
             switch (order)
             {
                 case OrderDirection.Ascending:
@@ -30,7 +31,6 @@ namespace CarDealer.Services
                     break;
                 default:
                     throw new InvalidOperationException($"Invalid order direcetion : {order}");
-                    break;
             }
             return customersQuery
                 .Select(c => new CustomerModel

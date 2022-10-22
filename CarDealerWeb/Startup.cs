@@ -37,6 +37,7 @@ namespace CarDealerWeb
             services.AddRazorPages();
 
             services.AddTransient<ICustomerService, CustomersService>();
+            services.AddTransient<ICarService, CarService>();
 
         }
 
@@ -64,9 +65,9 @@ namespace CarDealerWeb
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "customer",
-                pattern: "customers/all/{order}",
-                defaults: new { controller = "Customers", action = "All" });
+                //endpoints.MapControllerRoute(name: "customer",
+                //pattern: "customers/all/{order}",
+                //defaults: new { controller = "Customers", action = "All" });
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
