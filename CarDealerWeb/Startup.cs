@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace CarDealerWeb
 
             services.AddTransient<ICustomerService, CustomersService>();
             services.AddTransient<ICarService, CarService>();
-
+            services.AddTransient<ISupplierService, SupplierService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +58,12 @@ namespace CarDealerWeb
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            //get pictures from local hdd
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(@"C:\Games\"),
+                RequestPath = "/avatars"
+            });
 
             app.UseRouting();
 

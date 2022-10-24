@@ -17,7 +17,7 @@ namespace CarsDealerWeb.Controllers
             this.cars = cars;
         }
 
-        [Route("cars/{make}")]
+        [Route("cars/{make}", Order = 2)]
         public IActionResult ByMake(string make)
         {
             var cars = this.cars.ByMake(make);
@@ -28,5 +28,9 @@ namespace CarsDealerWeb.Controllers
                 Cars = cars
             });
         }
+
+        [Route("cars/parts", Order = 1)]
+        public IActionResult Parts()
+            => View(this.cars.WithParts());
     }
 }

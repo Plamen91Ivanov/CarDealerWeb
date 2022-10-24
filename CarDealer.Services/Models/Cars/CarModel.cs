@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarDealer.Services.Models
+namespace CarDealer.Services.Models.Cars
 {
     public class CarModel
     {
