@@ -1,12 +1,15 @@
-﻿@{
+﻿@model List<string>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> 
+</div>
 
+@foreach (var item in Model)
+{
+    <img src="avatars/1/@item" width="33" height="33">
+}
 
-<img src="avatars/1/1.jpg" width="33" height="33">
-<img src="avatars/2/2.jpg" width="33" height="33">

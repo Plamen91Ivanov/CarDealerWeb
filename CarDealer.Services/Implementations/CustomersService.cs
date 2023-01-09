@@ -20,7 +20,6 @@ namespace CarDealer.Services
         {
             var customersQuery = this.db.Customers.AsQueryable();
 
-            
             switch (order)
             {
                 case OrderDirection.Ascending:

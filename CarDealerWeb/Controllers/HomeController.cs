@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace CarDealerWeb.Controllers
 {
@@ -20,7 +21,14 @@ namespace CarDealerWeb.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var dirs = Directory.GetFiles(@"C:\games\1");
+            var images = new List<string>();
+            foreach (var item in dirs)
+            {
+                var imgName = item.Split("C:\\games\\1\\")[1];
+                images.Add(imgName);
+            }
+            return View(images);
         }
 
         public IActionResult Privacy()
